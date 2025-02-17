@@ -1,0 +1,20 @@
+apiVersion: "v1alpha"
+kind: "VirtualWarehouse"
+name: "MyVirtualWarehouse"
+
+spec:
+        clusterId: "myClusterId"
+        dbcId: "myDbcID"
+        vwType: "impala"
+
+extensions:
+        - kind: "CatalogdPatch"
+          apiVersion: "v1alpha"
+          spec: 
+                resources:
+                        limits: 
+                                memory: 12G
+        - kind: "Suspension"
+          apiVersion: "v1alpha"
+          suspendCronExpression: "0 18 * * 5"
+          resumeCronExpression: "0 7 * * 1"
