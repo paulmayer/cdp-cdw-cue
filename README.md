@@ -1,4 +1,4 @@
-Cloduera Data Warehouse with CUE
+Cloudera Data Warehouse with CUE
 ================================
 
 This repository contains a small proof-of-concept for handling [Cloudera Public Cloud][CDP] virtual
